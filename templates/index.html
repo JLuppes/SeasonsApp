@@ -1,38 +1,24 @@
-<!DOCTYPE html>
+{% extends "base.html" %} {% block title %}Home — Flask Date App{% endblock %}
+{% block content %}
 
-<html>
-  <head>
-    <title>Flask Date App</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+<p>The current year is {{ year }}.</p>
 
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+<p>The current month is {{ month }}.</p>
 
-  <body>
-    <h1>Welcome!</h1>
-    <p>The current year is {{ year }}.</p>
-    <p>The current month is {{month}}.</p>
+{% if month in ["March", "April", "May"] %}
 
-    {% if month in ["March", "April", "May"] %}
-    <p>It's springtime! 🪷</p>
-    {% elif month in ["June", "July", "August"] %}
-    <p>It's Summer! 😎</p>
-    {% elif month in ["September", "October", "November"] %}
-    <p>It's Fall! 🍀</p>
-    {% else %}
-    <p>It's Winter! 🍧</p>
-    {% endif %}
-    
-  </body>
-</html>
+<p>It’s Springtime! 🌷</p>
+
+{% elif month in ["June", "July", "August"] %}
+
+<p>It’s Summer! 🌞</p>
+
+{% elif month in ["September", "October", "November"] %}
+
+<p>It’s Fall! 🍁</p>
+
+{% else %}
+
+<p>It’s Winter! ⛸️</p>
+
+{% endif %} {% endblock %}
