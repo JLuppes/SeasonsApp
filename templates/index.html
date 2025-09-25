@@ -9,7 +9,9 @@
   <body>
     <h1>Welcome!</h1>
     <p>The current year is {{ year }}.</p>
-    <p>The current month is {{month}}.</p>
+    <p>The current month is {{ month }}.</p>
+    <p>The current day is {{ day }}.</p>
+    <p>The current now is {{ now }}.</p>
 
     {% if month in ["March", "April", "May"] %}
     <p>It's springtime! 🪷</p>
@@ -20,6 +22,5 @@
     {% else %}
     <p>It's Winter! 🍧</p>
     {% endif %}
-    
   </body>
 </html>
