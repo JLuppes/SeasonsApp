@@ -13,3 +13,19 @@ p {
   font-size: 1.2em;
   color: limegreen;
 }
+
+.card-display {
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+#yourCard {
+  max-width: 10em;
+  padding: 1em;
+}
