@@ -1,5 +1,7 @@
-{% extends "base.html" %} {% block title %}Home — Flask Date App{% endblock %}
+{% extends "base.html" %} {% block title %}{{super()}} - Home{% endblock %}
 {% block content %}
+
+<h1>Home</h1>
 
 <p>The current year is {{ year }}.</p>
 

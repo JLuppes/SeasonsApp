@@ -1,7 +1,9 @@
-{% extends "base.html" %} {% block title %}Home — Flask Date App{% endblock %}
-{% block content %}
+{% extends "base.html" %} {% block title %} {{ super() }} - Cards{% endblock %} {% block content
+%}
+
+<h1>Cards</h1>
+
 <h2>Is this your card?:</h2>
 <p>{{rank}} of {{suit}}</p>
 
-
- {% endblock %}
+{% endblock %}
