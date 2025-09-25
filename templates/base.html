@@ -36,7 +36,7 @@
       >
         <div class="container-fluid">
           <a class="navbar-brand" href="{{ url_for('home') }}"
-            >Josh's Calendar/Card Site</a
+            >Josh's Calendar and Cards Site</a
           >
           <button
             class="navbar-toggler"
@@ -67,7 +67,11 @@
     <main>{% block content %}{% endblock %}</main>
 
     <footer>
-      <p>Demo app — Flask + Jinja – CWEB1116</p>
+      <nav class="navbar fixed-bottom bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Josh's Calendar and Cards App</a>
+        </div>
+      </nav>
     </footer>
   </body>
 </html>
