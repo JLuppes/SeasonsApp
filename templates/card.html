@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block title %} {{ super() }} - Cards{% endblock %} {% block content
+%}
+
+<h1>Cards</h1>
+
+<div class="card-display">
+  
+<div class="card" style="width: 18rem;">
+  <img id="yourCard" src="{{url_for('static', filename='Cards/' + rank.lower() + '_of_' + suit.lower() + '.svg')}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{rank}} of {{suit}}</h5>
+    <p class="card-text">Your card is the {{rank}} of {{suit}}.</p>
+    <a href="{{url_for('card')}}" class="btn btn-primary">Try again?</a>
+  </div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,26 +1,26 @@
-<!DOCTYPE html>
+{% extends "base.html" %} {% block title %}{{super()}} - Home{% endblock %}
+{% block content %}
 
-<html>
-  <head>
-    <title>Flask Date App</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
-  </head>
+<h1>Home</h1>
 
-  <body>
-    <h1>Welcome!</h1>
-    <p>The current year is {{ year }}.</p>
-    <p>The current month is {{ month }}.</p>
-    <p>The current day is {{ day }}.</p>
-    <p>The current now is {{ now }}.</p>
+<p>The current year is {{ year }}.</p>
 
-    {% if month in ["March", "April", "May"] %}
-    <p>It's springtime! 🪷</p>
-    {% elif month in ["June", "July", "August"] %}
-    <p>It's Summer! 😎</p>
-    {% elif month in ["September", "October", "November"] %}
-    <p>It's Fall! 🍀</p>
-    {% else %}
-    <p>It's Winter! 🍧</p>
-    {% endif %}
-  </body>
-</html>
+<p>The current month is {{ month }}.</p>
+
+{% if month in ["March", "April", "May"] %}
+
+<p>It’s Springtime! 🌷</p>
+
+{% elif month in ["June", "July", "August"] %}
+
+<p>It’s Summer! 🌞</p>
+
+{% elif month in ["September", "October", "November"] %}
+
+<p>It’s Fall! 🍁</p>
+
+{% else %}
+
+<p>It’s Winter! ⛸️</p>
+
+{% endif %} {% endblock %}
