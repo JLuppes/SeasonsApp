@@ -1,16 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: green;
-    text-align: center;
-    padding: 30px
+  font-family: Arial, sans-serif;
+  background-color: green;
+  text-align: center;
+  padding: 30px;
 }
 
 h1 {
-    color: purple;
+  color: purple;
 }
 
 p {
-    font-size: 1.2em;
-    color: teal;
-
+  font-size: 1.2em;
+  color: teal;
 }
