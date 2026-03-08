@@ -22,3 +22,23 @@ def card():
     randomRank = random.choice(ranks)
     randomSuit = random.choice(suits)
     return render_template("card.html", rank=randomRank, suit=randomSuit)
+
+@app.route('/8ball')
+def eightball():
+    eightBall = random.randint(1,10)
+    eightResult = eightBall
+    return render_template("eightball.html", result=eightResult)
+
+@app.route('/gamerecs')
+def gamerecs():
+    mobas = ["League of Legends", "DOTA 2", "SMITE"]
+    fps = ["Counter Strike 2", "Valorant", "Destiny 2"]
+    rpgs = ["Skyrim", "Witcher 3", "Elden Ring"]
+    horror = ["Resident Evil RE", "Amnesia The Dark Descent"]
+    
+    randomMobas = random.choice(mobas)
+    randomFPS = random.choice(fps)
+    randomRPG = random.choice(rpgs)
+    randomHorror = random.choice(horror)
+
+    return render_template("gamerecs.html", mobarec = randomMobas, fpsrec = randomFPS, rpgrec = randomRPG, horrorrec = randomHorror)

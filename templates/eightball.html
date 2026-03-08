@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <div class="eightBall">
+        <h5 class="ball-title">Magic Eight Ball</h5>
+        <p>
+            <div class="info">
+                Feeling indecisive? Use the Magic Eight Ball to help you make a decision!
+            </div>
+        </p>
+        <p>
+            <a href="{{url_for('eightball')}}" class="btn btn-primary">Click for Magic Eight Ball!</a>
+        </p>
+        <div class="card" style="width: 18rem;">
+            <img id="yourNumber"
+                src="{{url_for('static', filename='8ball/' + result|string + '.svg')}}"
+                class="8ball-img-top" alt="...">
+        </div>
+        <p>
+
+        </p>
+        <p>The Magic Eight Ball says: {{result}}</p>
+
+        {% if result in [1, 2] %}
+        <p> Don't do it! </p>
+
+        {% elif result in [3, 4] %}
+        <p> I wouldn't recommend it! </p>
+
+        {% elif result in [5, 6] %}
+        <p> Go for it! </p>
+
+        {% elif result in [7, 8] %}
+        <p> You'd be silly if you didn't! </p>
+
+        {% elif result in [9] %}
+        <p> If you don't do it you'll regret it for the rest of your life! </p>
+
+        {% else %}
+        <p> Ask again later! </p>
+
+        {% endif %} {% endblock %}

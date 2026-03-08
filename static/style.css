@@ -11,7 +11,7 @@ h1 {
 
 p {
   font-size: 1.2em;
-  color: limegreen;
+  color: rgb(108, 240, 108);
 }
 
 .card-display {
@@ -28,4 +28,26 @@ p {
 #yourCard {
   max-width: 10em;
   padding: 1em;
+}
+
+.ball-title {
+  color: chartreuse;
+}
+
+#yourNumber {
+  max-width: 10em;
+  padding: 1em;
+}
+
+.info {
+  color: darkorange;
+}
+
+.gameRecs {
+  font-size: small;
+  color: rgb(84, 242, 221);
+}
+
+.rec-title {
+  font-size: x-large;
 }
