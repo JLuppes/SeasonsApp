@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <div class="gameRecs">
+        <h5 class="rec-title">Game Recommendations</h5>
+        <p>
+        <div class="info">
+            <p>Don't know which games to play? Here are some of my thoughts!</p>
+        </div>
+        <p>
+            <a href="{{url_for('gamerecs')}}" class="btn btn-primary">Click for MOBA!</a>
+            <p>I recommend: {{mobarec}}</p>
+            
+            {% if mobarec in ["League of Legends"] %}
+            <p> League of Legends is toxic but great! </p>
+            
+            {% elif mobarec in ["DOTA 2"] %}
+            <p> DOTA 2 is old but a classic! </p>
+            
+            {% else %}
+            <p> SMITE is boring but less pressure and more casual! </p>
+            
+            {% endif %}
+        </p>
+        <p>
+            <a href="{{url_for('gamerecs')}}" class="btn btn-primary">Click for FPS!</a>
+            <p>I recommend: {{fpsrec}}</p>
+
+            {% if fpsrec in ["Counter Strike 2"] %}
+            <p> CS2 is toxic but great to vent anger by yelling at people! </p>
+
+            {% elif fpsrec in ["Valorant"] %}
+            <p> Valorant is weird but colorful and quirky! </p>
+
+            {% else %}
+            <p> I actually wouldn't recommend Destiny 2..... </p>
+            
+            {% endif %}
+        </p>
+        <p>
+            <a href="{{url_for('gamerecs')}}" class="btn btn-primary">Click for RPG!</a>
+            <p>I recommend: {{rpgrec}}</p>
+
+            {% if rpgrec in ["Skyrim"] %}
+            <p> Can't ever go wrong with Skyrim! </p>
+
+            {% elif rpgrec in ["Witcher 3"] %}
+            <p> Probably one of the best games ever made! </p>
+
+            {% else %}
+            <p> Elden Ring is also one of the best games ever made! </p>
+
+            {% endif %}
+        </p>
+        <p>
+            <a href="{{url_for('gamerecs')}}" class="btn btn-primary">Click for Horror!</a>
+            <p>I recommend: {{horrorrec}}</p>
+
+            {% if horrorrec in ["Resident Evil RE"] %}
+            <p> You can't read this text because its cut off! </p>
+
+            {% else %}
+            <p> You are unable to read this because its cut off! </p>
+
+            {% endif %}
+        </p>
+    </div>
+</div>
+
+{% endblock %}
